@@ -1,9 +1,9 @@
-import React from 'react'
+import {useList} from '@pankod/refine-core'
 
-const home = () => {
+const Home = () => {
   return (
     <div>Home</div>
   )
 }
 
-export default home
+export default Home
