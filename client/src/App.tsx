@@ -18,7 +18,7 @@ import {
   Home,
   Agents,
   MyProfile,
-  PropertyDeatils,
+  PropertyDetails,
   AllProperties,
   CreateProperty,
   AgentProfile,
