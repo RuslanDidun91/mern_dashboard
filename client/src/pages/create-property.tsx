@@ -12,12 +12,27 @@ const CreateProperty = () => {
   const [propertyImage, setPropertyImage] = useState({ name: '', url: '' });
   const { refineCore: { onFinish, formLoading }, register, handleSubmit } = useForm();
 
-  const handleImageChange = () => {
-    
-  }
+  const handleImageChange = (file: File) => {
+    const reader = (readFile: File) =>
+      new Promise<string>((resolve, reject) => {
+        const fileReader = new FileReader();
+        fileReader.onload = () => resolve(fileReader.result as string);
+        fileReader.readAsDataURL(readFile);
+      });
 
-  const onFinishHandler = () => {
+    reader(file).then((result: string) =>
+      setPropertyImage({ name: file?.name, url: result }),
+    );
+  };
 
+  //submit data through refine
+  const onFinishHandler = async (data: FieldValues) => {
+    if (!propertyImage.name) return alert('Please select an image');
+    await onFinish({
+      ...data,
+      photo: propertyImage.url,
+      email: user.email,
+    });
   }
 
   return (
