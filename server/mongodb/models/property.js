@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const PropertySchema = new mongoose.Schema({
   title: { type: String, required: true },
@@ -7,10 +7,10 @@ const PropertySchema = new mongoose.Schema({
   location: { type: String, required: true },
   price: { type: Number, required: true },
   photo: { type: String, required: true },
-  creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  creator: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
 
-const propertyModel = mongoose.model('Property', PropertySchema);
-export default propertyModel;
+const propertyModel = mongoose.model("Property", PropertySchema);
 
+export default propertyModel;
 
