@@ -3,10 +3,11 @@ import { CustomButtonProps } from 'interfaces/common';
 
 
 const CustomButton = ({
-  type, title, backgroundColor, color, fullWidth, icon, handleClick
+  type, title, backgroundColor, color, fullWidth, icon, handleClick, disabled
 }: CustomButtonProps) => {
   return (
     <Button
+    disabled={disabled}
       type={type === 'submit' ? 'submit' : 'button'}
       sx={{
         flex: fullWidth ? 1 : 'unset', padding: '10px 15px',
