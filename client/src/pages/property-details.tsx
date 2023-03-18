@@ -27,7 +27,7 @@ const PropertyDetails = () => {
   if (isError) return <div>Error</div>
 
   const isCurrentUser = user.email === propertyDetails.creator.email;
-
+console.log(isCurrentUser)
   /* eslint-disable no-restricted-globals */
   const handleDeleteProperty = () => {
     const response = confirm(
