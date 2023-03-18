@@ -1,13 +1,6 @@
 import { Add } from "@mui/icons-material";
 import { useTable } from "@pankod/refine-core";
-import {
-  Box,
-  Stack,
-  Typography,
-  TextField,
-  Select,
-  MenuItem,
-} from "@pankod/refine-mui";
+import {Box,Stack, Typography, TextField, Select, MenuItem} from "@pankod/refine-mui";
 import { useNavigate } from "@pankod/refine-react-router-v6";
 import { useMemo } from "react";
 import { PropertyCard, CustomButton } from "components";
