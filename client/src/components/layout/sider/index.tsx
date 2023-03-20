@@ -12,6 +12,7 @@ import {
   IconButton,
   MuiList,
 } from "@pankod/refine-mui";
+
 import {
   ListOutlined,
   Logout,
@@ -22,6 +23,7 @@ import {
   MenuRounded,
   Dashboard,
 } from "@mui/icons-material";
+
 import {
   CanAccess,
   ITreeMenu,
@@ -205,7 +207,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                   fontSize: "16px",
                   fontWeight: isSelected ? "bold" : "normal",
                   color: isSelected ? '#fff' : '#808191',
-                  marginLeft: '10px' 
+                  marginLeft: '10px'
                 }}
               />
             </ListItemButton>
@@ -276,9 +278,9 @@ export const Sider: typeof DefaultSider = ({ render }) => {
       <ListItemButton
         key="logout"
         onClick={() => mutateLogout()}
-        sx={{ 
+        sx={{
           justifyContent: "center",
-          margin:  '10px auto',
+          margin: '10px auto',
           borderRadius: '12px',
           minWidth: '56px',
           width: '90%'
@@ -418,7 +420,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
               textAlign: "center",
               borderRadius: 0,
               borderTop: "1px solid #ffffff1a",
-              '&:hover': { 
+              '&:hover': {
                 background: '#1e36e8'
               }
             }}
