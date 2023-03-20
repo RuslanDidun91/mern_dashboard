@@ -8,7 +8,6 @@ import {
   ErrorComponent,
 } from "@pankod/refine-mui";
 import dataProvider from "@pankod/refine-simple-rest";
-import { MuiInferencer } from "@pankod/refine-inferencer/mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import axios, { AxiosRequestConfig } from "axios";
 import { ColorModeContextProvider } from "contexts";
@@ -58,7 +57,7 @@ function App() {
 
       //safe user to MongoDB
       if (profileObj) {
-        const response = await fetch('http://localhost:8080/api/v1/users', {
+        const response = await fetch('https://mern-dashboard-ln4d.onrender.com/api/v1/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -125,7 +124,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://localhost:8080/api/v1")}
+          dataProvider={dataProvider("https://mern-dashboard-ln4d.onrender.com/api/v1")}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
